@@ -43,36 +43,6 @@ img {
     display: flex;
 }
 
-.navbar-toggler:focus {
-    box-shadow: none;
-}
-
-.navbar-toggler, .collapsed {
-    background: #FF3F40;
-    border: 4px solid #FF3F40;
-}
-
-.navbar-toggler:hover {
-    background: #000000;
-    transition: 0.8s;
-    border-radius: 10px;
-}
-
-.span {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.49px;
-    text-transform: uppercase;
-    color: #E0E0E0;
-}
-
-.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
-    justify-content: center;
-}
-
 .menu__link_active {
     background: #FF3F40;
 }
@@ -86,19 +56,7 @@ img {
 }
 
 .menu2 {
-    margin-bottom: 0;
-    gap: 24px;
-}
-
-.navBar {
-    display: none;
-}
-
-.navbar, .navbar-dark {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    background: #000000;
+    padding: 5px 0px;
 }
 
 .menu__link:hover {
@@ -307,7 +265,6 @@ img {
 .products_menu {
     display: flex;
     justify-content: center;
-    padding-left: 0;
 }
 
 .products__list {
@@ -340,7 +297,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     margin-top: 58px;
-    gap: 7px;
+    gap: 26px;
 }
 
 .products_cube__list {
@@ -592,17 +549,17 @@ img {
 }
 
 .connection_window__name {
-    width: 340px;
+    width: 267px;
     padding-bottom: 25px;
 }
 
 .connection_window__email {
-    width: 340px;
+    width: 267px;
     padding-bottom: 25px;
 }
 
 .connection_window__text {
-    width: 734px;
+    width: 659px;
     text-align: start;
     padding-bottom: 200px;
     resize: none;
@@ -711,6 +668,7 @@ img {
 .footer_social {
     display: flex;
     gap: 18px;
+
 }
 
 /* Стили адаптив */
@@ -808,7 +766,7 @@ img {
     }
 
     .connection_window__small {
-        width: 522px;
+        width: 600px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -819,7 +777,7 @@ img {
 
     .connection_window__name,
     .connection_window__email {
-        width: 250px;
+        width: 200px;
     }
 
     .subscribe_distribution {
@@ -890,34 +848,81 @@ img {
     .team_aside__text {
         margin-bottom: 29px;
     }
+
 }
 
 /* Бургер меню */
 
-@media (max-width: 800px) {
-    .navBar {
-        display: block;
-    }
-    .menu {
-        display: none;
-    }
+.accordion-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center
+}
 
-    .menu2 {
-        flex-wrap: wrap;
-        padding-left: calc(50% - 300px /2);
-        padding-right: calc(50% - 300px /2);
-    }
+.accordion {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.49px;
+    text-transform: uppercase;
+    color: #E0E0E0;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
 
+.accordion-header {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: left;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 132px;
+    border: 2px solid #FF3F40;
+}
+
+.accordion-body {
+    display: none;
+    font-size: 14px;
+}
+
+.accordion-header:hover {
+    background-color: #FF3F40;
+}
+
+.active-accordion {
+    background-color: #FF3F40;
+    border-radius: 5px;
+}
+
+.accordions {
+    background: #000;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.accordion-buton {
+    padding: 10px;
+    border-radius: 10px;
 }
 
 /* Стили для мобилок  */
 
 @media (max-width: 767px) {
-
-    * {
-        margin: 0;
-        padding: 0;
-    }
 
     .center {
         padding-left: calc(50% - 300px /2);
@@ -926,22 +931,35 @@ img {
 
     .top {
         padding: 0;
+        padding-bottom: 43px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .accordion {
+        display: block;
+    }
+
+    .menu2 {
+        flex-wrap: wrap;
+        gap: 5px;
+        display: flex;
+        flex-direction: row;
     }
 
     .menu__link {
         padding-top: 26px;
+        width: 85px;
         justify-content: center;
         border-radius: 5px;
-    }
-
-    .menu__link,
-    .menu__link_active {
-        width: 135px;
     }
 
     .media {
         padding-left: calc(50% - 300px /2);
         padding-right: calc(50% - 300px /2);
+        margin-top: 0;
     }
 
     .media__title {
@@ -1039,7 +1057,7 @@ img {
 
     .products_cube {
         margin-top: 28px;
-        padding-left: 0;
+        gap: 20px;
     }
 
     .products_cube__list {
